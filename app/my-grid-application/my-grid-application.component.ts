@@ -16,7 +16,10 @@ export class MyGridApplicationComponent {
   constructor(private cases:CasesService) {
     this.gridOptions = <GridOptions>{
       enableSorting: true,
-      enableFilter: true
+      enableFilter: true,
+      onGridReady: function (params) {
+        params.api.sizeColumnsToFit();
+      }
     };
     this.gridOptions.columnDefs = [
       { headerName: "Country", field: "country", width: 100 },
