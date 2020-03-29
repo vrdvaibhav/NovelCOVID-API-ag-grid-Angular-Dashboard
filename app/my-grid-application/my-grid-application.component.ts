@@ -15,21 +15,21 @@ export class MyGridApplicationComponent {
 
   constructor(private cases:CasesService) {
     this.gridOptions = <GridOptions>{
-      enableSorting: true,
-      enableFilter: true,
+      // enableSorting: true,
+      // enableFilter: true,
       onGridReady: function (params) {
         params.api.sizeColumnsToFit();
       }
     };
     this.gridOptions.columnDefs = [
-      { headerName: "Country", field: "country", width: 100 },
-      { headerName: "Cases", field: "cases", width: 100 },
-      { headerName: "Todays Cases", field: "todayCases", width: 100,cellRendererFramework: YellowComponentComponent, },
-      { headerName: "Deaths", field: "deaths", width: 100 },
-      { headerName: "Todays Deaths", field: "todayDeaths", cellRendererFramework: RedComponentComponent, width: 100 },
-      { headerName: "Recovered", field: "recovered", cellRendererFramework: GreenComponentComponent, width: 100 },
-      { headerName: "Active", field: "active", width: 100 },
-      { headerName: "Critical", field: "critical", width: 100 },
+      { headerName: "Country", field: "country" },
+      { headerName: "Cases", field: "cases" },
+      { headerName: "Todays Cases", field: "todayCases",cellRendererFramework: YellowComponentComponent, },
+      { headerName: "Deaths", field: "deaths" },
+      { headerName: "Todays Deaths", field: "todayDeaths", cellRendererFramework: RedComponentComponent },
+      { headerName: "Recovered", field: "recovered", cellRendererFramework: GreenComponentComponent },
+      { headerName: "Active", field: "active" },
+      { headerName: "Critical", field: "critical" },
     ];
 
     // this.gridOptions.rowData = [];

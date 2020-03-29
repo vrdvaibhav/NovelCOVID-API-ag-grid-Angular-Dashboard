@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
-import { AgGridModule } from "ag-grid-angular/main";
+import { AgGridModule } from 'ag-grid-angular';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MyGridApplicationComponent } from "./my-grid-application/my-grid-application.component";
